@@ -29,8 +29,16 @@ function greetings(name) {
 function playgame(name) {
     let n = name;
     alert(`We are going to play Rock-Paper-Scissors ${n}!`);
-    alert("I hope you are excited!");
-    alert("Let's Start!");
+    alert("And guess who is your rival in this game?\nYour very own Computer!");
+    alert("I wish you Good Luck!");
+    alert("Let\'s Start!");
 }
-
+function playerselection(n) {
+    let m = n;
+    let playerchoice = prompt(`So what do you select ${m}?\nIs it Rock or Paper or Scissor?`);
+}
+function computerselection() {
+    choices = ["Rock", "Paper", "Scissor"];
+    let computerchoice = choices[Math.floor(Math.random() * choices.length)];
+}
 game();
