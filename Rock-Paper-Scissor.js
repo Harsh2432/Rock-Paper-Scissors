@@ -112,8 +112,7 @@ function roundres(name) {
     }
 }
 function endresult(name) {
-    alert(`${round} Rounds Played: `);
-    alert(`Time to display the end result!\n${name} Points: ${playerpoint}\n${comp} Points: ${computerpoint}`)
+    alert(`Time to display the end result!\n${round} Rounds Played:\n${name} Points: ${playerpoint}\n${comp} Points: ${computerpoint}`)
     if (playerpoint > computerpoint) {
         alert(`${name} Wins!`);
     }
