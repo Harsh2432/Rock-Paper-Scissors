@@ -45,7 +45,7 @@ body {
     align-items: center;
     font-family: monospace;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 10px;
 }
@@ -100,7 +100,7 @@ body {
     align-items: center;
     font-family: monospace;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 10px;
 }
@@ -116,7 +116,7 @@ body {
     padding: 10px;
     font-family: monospace;
     font-size: 18px;
-    width: 500px;
+    width: 515px;
 }
 
 #container .compSelection {
@@ -130,19 +130,134 @@ body {
     padding: 10px;
     font-family: monospace;
     font-size: 18px;
-    width: 500px;
+    width: 515px;
 }
 
 #container #options {
     display: flex;
+    flex: 1;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid white;
     border-radius: 10px;
     padding: 10px;
+    gap: 10px;
 }
 
 #container #options .userOptions {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#container #options .userOptions :hover {
+    background-color: orangered;
+}
+
+#container #options .userOptions .rock .rockButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 165px;
+    width: 165px;
+}
+
+#container #options .userOptions .rock .rockButton img {
+    height: 150px;
+    width: 150px;
+}
+
+#container #options .userOptions .paper .paperButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 165px;
+    width: 165px;
+}
+
+#container #options .userOptions .paper .paperButton img {
+    height: 150px;
+    width: 150px;
+}
+
+#container #options .userOptions .scissor .scissorButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 165px;
+    width: 165px;
+}
+
+#container #options .userOptions .scissor .scissorButton img {
+    height: 150px;
+    width: 150px;
+}
+
+#container .names {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+}
+
+#container .names .r {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: coral;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#container .names .p {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: coral;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#container .names .s {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: coral;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#container .move {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    width: 490px;
 }
 
 #container .result {
@@ -156,7 +271,7 @@ body {
     padding: 10px;
     font-family: monospace;
     font-size: 18px;
-    width: 500px;
+    width: 515px;
 }
 
 #container .winner {
@@ -170,5 +285,16 @@ body {
     padding: 10px;
     font-family: monospace;
     font-size: 18px;
-    width: 500px;
+    width: 515px;
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    background-color: #E5E7EB;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 24px;
+    padding: 10px;
 }
