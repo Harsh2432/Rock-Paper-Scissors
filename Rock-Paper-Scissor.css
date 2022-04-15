@@ -154,6 +154,7 @@ body {
 
 #container #options .userOptions :hover {
     background-color: orangered;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .rock .rockButton {
@@ -163,11 +164,13 @@ body {
     padding: 10px;
     height: 165px;
     width: 165px;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .rock .rockButton img {
     height: 150px;
     width: 150px;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .paper .paperButton {
@@ -177,11 +180,13 @@ body {
     padding: 10px;
     height: 165px;
     width: 165px;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .paper .paperButton img {
     height: 150px;
     width: 150px;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .scissor .scissorButton {
@@ -191,11 +196,13 @@ body {
     padding: 10px;
     height: 165px;
     width: 165px;
+    border-radius: 10px;
 }
 
 #container #options .userOptions .scissor .scissorButton img {
     height: 150px;
     width: 150px;
+    border-radius: 10px;
 }
 
 #container .names {
