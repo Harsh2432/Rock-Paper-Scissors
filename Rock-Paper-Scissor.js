@@ -17,27 +17,30 @@ compPoints.textContent = cp;
 choices = ["Rock", "Paper", "Scissor"]
 computerchoice = choices[Math.floor(Math.random() * choices.length)];
 
+const computerSelection = document.createElement("div");
+computerSelection.classList.add("compSelection");
+computerSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+
 let compSelect = function (computerchoice) {
-    const computerSelection = document.createElement("div");
-    computerSelection.classList.add("compSelection");
     computerSelection.textContent = `${computerchoice} is been selected by Computer!`;
-    computerSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
     container.insertBefore(computerSelection, options);
 };
 
+const userSelection = document.createElement("div");
+userSelection.classList.add("userSelection");
+userSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+
 let userSelect = function (playerchoice, computerchoice) {
-    const userSelection = document.createElement("div");
-    userSelection.classList.add("userSelection");
     userSelection.textContent = `${playerchoice} is been selected by User!`;
-    userSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
     container.insertBefore(userSelection, options);
     compSelect(computerchoice);
 };
 
+const result = document.createElement("div");
+result.classList.add("result");
+result.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+
 let results = function (playerchoice, computerchoice) {
-    const result = document.createElement("div");
-    result.classList.add("result");
-    result.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
     if (playerchoice == "Rock" && computerchoice == "Scissor") {
         result.textContent = `${playerchoice} smashes ${computerchoice}!`;
     }
@@ -62,10 +65,11 @@ let results = function (playerchoice, computerchoice) {
     container.appendChild(result);
 };
 
+const winner = document.createElement("div");
+winner.classList.add("winner");
+winner.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+
 let winners = function (playerchoice, computerchoice) {
-    const winner = document.createElement("div");
-    winner.classList.add("winner");
-    winner.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
     if (playerchoice == "Rock" && computerchoice == "Scissor") {
         winner.textContent = "User Wins! Computer Lose!";
         up += 1;
@@ -100,6 +104,14 @@ let winners = function (playerchoice, computerchoice) {
         winner.textContent = "No one Wins! No one Lose!";
     }
     container.appendChild(winner);
+    setInterval(reload, infinite);
+}
+
+let reload = function () {
+    userSelection.remove();
+    computerSelection.remove();
+    result.remove();
+    winner.remove();
 }
 
 const rockButton = document.querySelector(".rockButton");
