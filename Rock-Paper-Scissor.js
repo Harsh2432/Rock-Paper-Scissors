@@ -1,5 +1,7 @@
-
-
+const rockButton = document.querySelector(".rockButton");
+rockButton.addEventListener("click", () => {
+    alert("Hello, World!");
+});
 
 
 
