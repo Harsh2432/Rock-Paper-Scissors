@@ -290,11 +290,15 @@ body {
 
 .footer {
     display: flex;
-    flex: 1;
     background-color: #E5E7EB;
     justify-content: center;
     align-items: center;
-    font-family: monospace;
-    font-size: 24px;
     padding: 10px;
 }
+
+.footer .copyright {
+    display: flex;
+    font-family: monospace;
+    font-size: 24px;
+}
+
