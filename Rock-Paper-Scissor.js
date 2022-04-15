@@ -4,6 +4,13 @@ const options = document.querySelector("#options");
 
 const footer = document.querySelector(".footer");
 
+let up = 0;
+
+let cp = 0;
+
+const userPoints = document.querySelector(".userPoints");
+
+
 choices = ["Rock", "Paper", "Scissor"]
 computerchoice = choices[Math.floor(Math.random() * choices.length)];
 
@@ -24,39 +31,84 @@ let userSelect = function (playerchoice, computerchoice) {
     compSelect(computerchoice);
 };
 
-const result = document.createElement("div");
-result.classList.add("result");
-result.textContent = results(playerchoice, computerchoice);
-result.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
-container.insertBefore(result, footer);
-
-const winner = document.createElement("div");
-winner.classList.add("winner");
-w
-
-
-let results = function(playerchoice, computerchoice) {
-    if(playerchoice == "Rock" && computerchoice == "Scissor") {
-        result = `${playerchoice} smashes ${computerchoice}`;
+let results = function (playerchoice, computerchoice) {
+    const result = document.createElement("div");
+    result.classList.add("result");
+    result.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+    if (playerchoice == "Rock" && computerchoice == "Scissor") {
+        result.textContent = `${playerchoice} smashes ${computerchoice}!`;
     }
+    else if (playerchoice == "Rock" && computerchoice == "Paper") {
+        result.textContent = `${computerchoice} covers ${playerchoice}!`;
+    }
+    else if (playerchoice == "Paper" && computerchoice == "Rock") {
+        result.textContent = `${playerchoice} covers ${computerchoice}!`;
+    }
+    else if (playerchoice == "Paper" && computerchoice == "Scissor") {
+        result.textContent = `${computerchoice} cuts ${playerchoice}!`;
+    }
+    else if (playerchoice == "Scissor" && computerchoice == "Rock") {
+        result.textContent = `${computerchoice} smashes ${playerchoice}!`;
+    }
+    else if (playerchoice == "Scissor" && computerchoice == "Paper") {
+        result.textContent = `${playerchoice} cuts ${computerchoice}!`;
+    }
+    else {
+        result.textContent = "It\'s a Tie!";
+    }
+    container.appendChild(result);
 };
+
+let winners = function (playerchoice, computerchoice) {
+    const winner = document.createElement("div");
+    winner.classList.add("winner");
+    winner.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+    if (playerchoice == "Rock" && computerchoice == "Scissor") {
+        winner.textContent = "User Wins! Computer Lose!";
+    }
+    else if (playerchoice == "Rock" && computerchoice == "Paper") {
+        winner.textContent = "Computer Wins! User Lose!";
+    }
+    else if (playerchoice == "Paper" && computerchoice == "Rock") {
+        winner.textContent = "User Wins! Computer Lose!";
+    }
+    else if (playerchoice == "Paper" && computerchoice == "Scissor") {
+        winner.textContent = "Computer Wins! User Lose!";
+    }
+    else if (playerchoice == "Scissor" && computerchoice == "Rock") {
+        winner.textContent = "Computer Wins! User Lose!";
+    }
+    else if (playerchoice == "Scissor" && computerchoice == "Paper") {
+        winner.textContent = "User Wins! Computer Lose!";
+    }
+    else {
+        winner.textContent = "No one Wins! No one Lose!";
+    }
+    container.appendChild(winner);
+}
 
 const rockButton = document.querySelector(".rockButton");
 rockButton.addEventListener("click", () => {
     let playerchoice = "Rock";
     userSelect(playerchoice, computerchoice);
+    results(playerchoice, computerchoice);
+    winners(playerchoice, computerchoice);
 });
 
 const paperButton = document.querySelector(".paperButton");
 paperButton.addEventListener("click", () => {
     let playerchoice = "Paper";
     userSelect(playerchoice, computerchoice);
+    results(playerchoice, computerchoice);
+    winners(playerchoice, computerchoice);
 });
 
 const scissorButton = document.querySelector(".scissorButton");
 scissorButton.addEventListener("click", () => {
     let playerchoice = "Scissor";
     userSelect(playerchoice, computerchoice);
+    results(playerchoice, computerchoice);
+    winners(playerchoice, computerchoice);
 });
 
 
