@@ -4,10 +4,9 @@ const options = document.querySelector("#options");
 
 const footer = document.querySelector(".footer");
 
-let userPlus = function () {
-    const userPoints = document.querySelector(".userPoints");
-    userPoints.style.cssText = "display: flex; flex: 1; color: white; justify-content: center; align-items: center; font-family: monospace; font-size: 18px;";
-}
+const userPoints = document.querySelector(".userPoints");
+
+const compPoints = document.querySelector(".compPoints");
 
 choices = ["Rock", "Paper", "Scissor"]
 computerchoice = choices[Math.floor(Math.random() * choices.length)];
@@ -63,21 +62,27 @@ let winners = function (playerchoice, computerchoice) {
     winner.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
     if (playerchoice == "Rock" && computerchoice == "Scissor") {
         winner.textContent = "User Wins! Computer Lose!";
+        userPoints.textContent += 1;
     }
     else if (playerchoice == "Rock" && computerchoice == "Paper") {
         winner.textContent = "Computer Wins! User Lose!";
+        compPoints.textContent += 1;
     }
     else if (playerchoice == "Paper" && computerchoice == "Rock") {
         winner.textContent = "User Wins! Computer Lose!";
+        userPoints.textContent += 1;
     }
     else if (playerchoice == "Paper" && computerchoice == "Scissor") {
         winner.textContent = "Computer Wins! User Lose!";
+        compPoints.textContent += 1;
     }
     else if (playerchoice == "Scissor" && computerchoice == "Rock") {
         winner.textContent = "Computer Wins! User Lose!";
+        compPoints.textContent += 1;
     }
     else if (playerchoice == "Scissor" && computerchoice == "Paper") {
         winner.textContent = "User Wins! Computer Lose!";
+        userPoints.textContent += 1;
     }
     else {
         winner.textContent = "No one Wins! No one Lose!";
