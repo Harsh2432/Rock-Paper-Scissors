@@ -4,12 +4,10 @@ const options = document.querySelector("#options");
 
 const footer = document.querySelector(".footer");
 
-let up = 0;
-
-let cp = 0;
-
-const userPoints = document.querySelector(".userPoints");
-
+let userPlus = function () {
+    const userPoints = document.querySelector(".userPoints");
+    userPoints.style.cssText = "display: flex; flex: 1; color: white; justify-content: center; align-items: center; font-family: monospace; font-size: 18px;";
+}
 
 choices = ["Rock", "Paper", "Scissor"]
 computerchoice = choices[Math.floor(Math.random() * choices.length)];

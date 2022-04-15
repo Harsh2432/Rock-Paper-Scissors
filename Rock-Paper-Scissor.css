@@ -61,7 +61,7 @@ body {
     width: 500px;
 }
 
-/* #container .inner .scoreBoard .userPoints {
+#container .inner .scoreBoard .userPoints {
     display: flex;
     flex: 1;
     color: white;
@@ -69,7 +69,7 @@ body {
     align-items: center;
     font-family: monospace;
     font-size: 18px;
-} */
+}
 
 #container .inner .scoreBoard .colon {
     display: flex;
