@@ -24,13 +24,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #1F2937;
+    padding: 10px;
     gap: 10px;
 }
 
 #container .inner {
     display: flex;
     flex: 1;
-    padding-top: 10px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -132,6 +132,8 @@ body {
     font-size: 18px;
     width: 500px;
 }
+
+
 
 #container .result {
     display: flex;
