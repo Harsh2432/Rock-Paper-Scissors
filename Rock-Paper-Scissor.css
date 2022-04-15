@@ -133,7 +133,17 @@ body {
     width: 500px;
 }
 
+#container #options {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
 
+#container #options .userOptions {
+    display: flex;
+}
 
 #container .result {
     display: flex;
