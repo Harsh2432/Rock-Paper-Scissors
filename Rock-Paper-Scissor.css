@@ -270,7 +270,7 @@ body {
     width: 490px;
 }
 
-#container .result {
+/* #container .result {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -282,9 +282,9 @@ body {
     font-family: monospace;
     font-size: 18px;
     width: 515px;
-}
+} */
 
-#container .winner {
+/* #container .winner {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -296,7 +296,7 @@ body {
     font-family: monospace;
     font-size: 18px;
     width: 515px;
-}
+} */
 
 .footer {
     display: flex;

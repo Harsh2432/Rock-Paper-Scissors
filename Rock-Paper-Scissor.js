@@ -2,43 +2,61 @@ const container = document.querySelector("#container");
 
 const options = document.querySelector("#options");
 
+const footer = document.querySelector(".footer");
+
 choices = ["Rock", "Paper", "Scissor"]
 computerchoice = choices[Math.floor(Math.random() * choices.length)];
 
 let compSelect = function (computerchoice) {
-    const compSelection = document.createElement("div");
-    compSelection.classList.add("compSelection");
-    compSelection.textContent = `${computerchoice} is been selected by Computer!`;
-    compSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
-    container.insertBefore(compSelection, options);
-    userSelect(compSelection);
+    const computerSelection = document.createElement("div");
+    computerSelection.classList.add("compSelection");
+    computerSelection.textContent = `${computerchoice} is been selected by Computer!`;
+    computerSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+    container.insertBefore(computerSelection, options);
 };
 
-let userSelect = function (playerchoice) {
+let userSelect = function (playerchoice, computerchoice) {
     const userSelection = document.createElement("div");
     userSelection.classList.add("userSelection");
     userSelection.textContent = `${playerchoice} is been selected by User!`;
     userSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
-    container.insertBefore(userSelection, compSelection);
+    container.insertBefore(userSelection, options);
+    compSelect(computerchoice);
+};
+
+const result = document.createElement("div");
+result.classList.add("result");
+result.textContent = results(playerchoice, computerchoice);
+result.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+container.insertBefore(result, footer);
+
+const winner = document.createElement("div");
+winner.classList.add("winner");
+w
+
+
+let results = function(playerchoice, computerchoice) {
+    if(playerchoice == "Rock" && computerchoice == "Scissor") {
+        result = `${playerchoice} smashes ${computerchoice}`;
+    }
 };
 
 const rockButton = document.querySelector(".rockButton");
 rockButton.addEventListener("click", () => {
     let playerchoice = "Rock";
-    compSelect(computerchoice);
-    userSelect(playerchoice);
+    userSelect(playerchoice, computerchoice);
 });
-
-
 
 const paperButton = document.querySelector(".paperButton");
 paperButton.addEventListener("click", () => {
-    alert("Hello, World!");
+    let playerchoice = "Paper";
+    userSelect(playerchoice, computerchoice);
 });
 
 const scissorButton = document.querySelector(".scissorButton");
 scissorButton.addEventListener("click", () => {
-    alert("Hello, World!");
+    let playerchoice = "Scissor";
+    userSelect(playerchoice, computerchoice);
 });
 
 
