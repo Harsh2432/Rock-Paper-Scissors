@@ -14,9 +14,6 @@ userPoints.textContent = up;
 const compPoints = document.querySelector(".compPoints");
 compPoints.textContent = cp;
 
-choices = ["Rock", "Paper", "Scissor"]
-computerchoice = choices[Math.floor(Math.random() * choices.length)];
-
 const computerSelection = document.createElement("div");
 computerSelection.classList.add("compSelection");
 computerSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
@@ -117,6 +114,8 @@ let reload = function () {
 const rockButton = document.querySelector(".rockButton");
 rockButton.addEventListener("click", () => {
     let playerchoice = "Rock";
+    choices = ["Rock", "Paper", "Scissor"]
+    computerchoice = choices[Math.floor(Math.random() * choices.length)];
     userSelect(playerchoice, computerchoice);
     results(playerchoice, computerchoice);
     winners(playerchoice, computerchoice);
@@ -125,6 +124,8 @@ rockButton.addEventListener("click", () => {
 const paperButton = document.querySelector(".paperButton");
 paperButton.addEventListener("click", () => {
     let playerchoice = "Paper";
+    choices = ["Rock", "Paper", "Scissor"]
+    computerchoice = choices[Math.floor(Math.random() * choices.length)];
     userSelect(playerchoice, computerchoice);
     results(playerchoice, computerchoice);
     winners(playerchoice, computerchoice);
@@ -133,6 +134,8 @@ paperButton.addEventListener("click", () => {
 const scissorButton = document.querySelector(".scissorButton");
 scissorButton.addEventListener("click", () => {
     let playerchoice = "Scissor";
+    choices = ["Rock", "Paper", "Scissor"]
+    computerchoice = choices[Math.floor(Math.random() * choices.length)];
     userSelect(playerchoice, computerchoice);
     results(playerchoice, computerchoice);
     winners(playerchoice, computerchoice);
