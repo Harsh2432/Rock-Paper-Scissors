@@ -1,5 +1,43 @@
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
+const container = document.querySelector("#container");
+
+const options = document.querySelector("#options");
+
+choices = ["Rock", "Paper", "Scissor"]
+computerchoice = choices[Math.floor(Math.random() * choices.length)];
+
+let compSelect = function (computerchoice) {
+    const compSelection = document.createElement("div");
+    compSelection.classList.add("compSelection");
+    compSelection.textContent = `${computerchoice} is been selected by Computer!`;
+    compSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+    container.insertBefore(compSelection, options);
+    userSelect(compSelection);
+};
+
+let userSelect = function (playerchoice) {
+    const userSelection = document.createElement("div");
+    userSelection.classList.add("userSelection");
+    userSelection.textContent = `${playerchoice} is been selected by User!`;
+    userSelection.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+    container.insertBefore(userSelection, compSelection);
+};
+
+const rockButton = document.querySelector(".rockButton");
+rockButton.addEventListener("click", () => {
+    let playerchoice = "Rock";
+    compSelect(computerchoice);
+    userSelect(playerchoice);
+});
+
+
+
+const paperButton = document.querySelector(".paperButton");
+paperButton.addEventListener("click", () => {
+    alert("Hello, World!");
+});
+
+const scissorButton = document.querySelector(".scissorButton");
+scissorButton.addEventListener("click", () => {
     alert("Hello, World!");
 });
 

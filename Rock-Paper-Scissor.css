@@ -105,7 +105,7 @@ body {
     border-radius: 10px;
 }
 
-#container .userSelection {
+/* #container .userSelection {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -117,9 +117,9 @@ body {
     font-family: monospace;
     font-size: 18px;
     width: 515px;
-}
+} */
 
-#container .compSelection {
+/* #container .compSelection {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -131,7 +131,7 @@ body {
     font-family: monospace;
     font-size: 18px;
     width: 515px;
-}
+} */
 
 #container #options {
     display: flex;
