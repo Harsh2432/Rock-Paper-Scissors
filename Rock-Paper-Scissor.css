@@ -2,7 +2,103 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 5px;
+    margin: 5px;
+    gap: 10px;
 }
 
+.nav {
+    display: flex;
+    flex: 1;
+    background-color: #E5E7EB;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+}
+
+#container .inner {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#container .inner .user {
+    display: flex;
+    flex: 1;
+    color: white;
+    background-color: coral;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#container .inner .scoreBoard {
+    display: flex;
+    flex: 2;
+    border: 2px solid white;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+#container .inner .scoreBoard .userPoints {
+    display: flex;
+    flex: 1;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+#container .inner .scoreBoard .colon {
+    display: flex;
+    flex: 1;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+#container .inner .scoreBoard .compPoints {
+    display: flex;
+    flex: 1;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+#container .inner .comp {
+    display: flex;
+    flex: 1;
+    color: white;
+    background-color: coral;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+}
