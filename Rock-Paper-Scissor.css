@@ -105,34 +105,6 @@ body {
     border-radius: 10px;
 }
 
-/* #container .userSelection {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 18px;
-    width: 515px;
-} */
-
-/* #container .compSelection {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 18px;
-    width: 515px;
-} */
-
 #container #options {
     display: flex;
     flex: 1;
@@ -269,34 +241,6 @@ body {
     font-size: 18px;
     width: 490px;
 }
-
-/* #container .result {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 18px;
-    width: 515px;
-} */
-
-/* #container .winner {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 18px;
-    width: 515px;
-} */
 
 .footer {
     display: flex;
