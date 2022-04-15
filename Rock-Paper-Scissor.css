@@ -204,7 +204,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 500px;
+    width: 502px;
 }
 
 #container .names .r {
@@ -216,6 +216,7 @@ body {
     background-color: coral;
     font-family: monospace;
     font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     border-radius: 10px;
 }
@@ -229,6 +230,7 @@ body {
     background-color: coral;
     font-family: monospace;
     font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     border-radius: 10px;
 }
@@ -242,6 +244,7 @@ body {
     background-color: coral;
     font-family: monospace;
     font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     border-radius: 10px;
 }
@@ -294,6 +297,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    gap: 10px;
 }
 
 .footer .copyright {
@@ -302,3 +306,7 @@ body {
     font-size: 24px;
 }
 
+.footer .heart {
+    display: flex;
+    font-size: 22px;
+}
