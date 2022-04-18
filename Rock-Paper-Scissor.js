@@ -291,6 +291,18 @@ let endResult = function () {
 
     container.replaceChild(disResult, sayBye);
 
+    numRounds();
+};
+
+const roundsPlayed = document.createElement("div");
+roundsPlayed.classList.add("roundsPlayed");
+roundsPlayed.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+
+let numRounds = function () {
+    roundsPlayed.textContent = `${round} Rounds Played!`;
+
+    container.appendChild(roundsPlayed);
+
     disPoint();
 };
 
