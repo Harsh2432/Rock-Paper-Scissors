@@ -39,6 +39,29 @@ let welcomePlayer = function () {
 
     container.insertBefore(welcome, inner);
 
+    setTimeout(loading, 3000);
+};
+
+const loadingDec = document.createElement("div");
+loadingDec.classList.add("loadingDec");
+loadingDec.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px; gap: 10px;";
+
+let loading = function () {
+
+    container.replaceChild(loadingDec, welcome);
+
+    const load = document.createElement("div");
+    load.classList.add("load");
+    load.textContent = "Loading";
+    load.style.cssText = "display: flex; flex: 2; color: white; background-color: coral; justify-content: center; align-items: center; font-family: monospace; padding: 10px; font-size: 18px; font-weight: bold; border-radius: 10px;";
+
+    loadingDec.appendChild(load);
+
+    const loader = document.createElement("div");
+    loader.classList.add("loader");
+
+    loadingDec.appendChild(loader);
+
     setTimeout(playerName, 3000);
 };
 
@@ -48,7 +71,7 @@ player.style.cssText = "display: flex; flex-direction:column; flex: 1; justify-c
 
 let playerName = function () {
 
-    container.replaceChild(player, welcome);
+    container.replaceChild(player, loadingDec);
 
     const question = document.createElement("div");
     question.classList.add("question");
@@ -216,7 +239,7 @@ let results = function () {
 
     container.appendChild(scorePlus);
 
-    setTimeout(pageReload, 10000);
+    setTimeout(pageReload, 5000);
 };
 
 let pageReload = function () {
@@ -224,7 +247,53 @@ let pageReload = function () {
     computerSelection.remove();
     result.remove();
     scorePlus.remove();
-    roundAgain();
+    loadingFunction();
+};
+
+const loadDec = document.createElement("div");
+loadDec.classList.add("loadDec");
+loadDec.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px; gap: 10px;";
+
+let loadingFunction = function () {
+
+    const load = document.createElement("div");
+    load.classList.add("load");
+    load.textContent = "Loading";
+    load.style.cssText = "display: flex; flex: 2; color: white; background-color: coral; justify-content: center; align-items: center; font-family: monospace; padding: 10px; font-size: 18px; font-weight: bold; border-radius: 10px;";
+
+    loadDec.appendChild(load);
+
+    const loader = document.createElement("div");
+    loader.classList.add("loader");
+
+    loadDec.appendChild(loader);
+
+    container.replaceChild(loadDec, roundDec);
+
+    setTimeout(roundAgain, 3000);
+};
+
+const loadResult = document.createElement("div");
+loadResult.classList.add("loadResult");
+loadResult.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px; gap: 10px;";
+
+let loadingFunc = function () {
+
+    const load = document.createElement("div");
+    load.classList.add("load");
+    load.textContent = "Loading";
+    load.style.cssText = "display: flex; flex: 2; color: white; background-color: coral; justify-content: center; align-items: center; font-family: monospace; padding: 10px; font-size: 18px; font-weight: bold; border-radius: 10px;";
+
+    loadResult.appendChild(load);
+
+    const loader = document.createElement("div");
+    loader.classList.add("loader");
+
+    loadResult.appendChild(loader);
+
+    container.replaceChild(loadResult, sayBye);
+
+    setTimeout(endResult, 3000);
 };
 
 const sayBye = document.createElement("div");
@@ -232,7 +301,7 @@ sayBye.classList.add("sayBye");
 sayBye.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
 let roundAgain = function () {
-    clearTimeout(setTimeout(pageReload, 10000));
+    clearTimeout(setTimeout(pageReload, 5000));
 
     const anotherRound = document.createElement("div");
     anotherRound.classList.add("anotherRound");
@@ -273,14 +342,14 @@ let roundAgain = function () {
 
         container.insertBefore(sayBye, inner);
 
-        setTimeout(endResult, 10000);
+        setTimeout(loadingFunc, 3000);
     });
 
     playerDec.appendChild(noButton);
 
     anotherRound.appendChild(playerDec);
 
-    container.replaceChild(anotherRound, roundDec);
+    container.replaceChild(anotherRound, loadDec);
 };
 
 let endResult = function () {
@@ -289,7 +358,7 @@ let endResult = function () {
     disResult.textContent = "Time to display end Result! ";
     disResult.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
-    container.replaceChild(disResult, sayBye);
+    container.replaceChild(disResult, loadResult);
 
     numRounds();
 };
