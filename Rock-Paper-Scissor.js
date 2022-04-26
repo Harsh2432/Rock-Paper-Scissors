@@ -416,7 +416,7 @@ let disWinner = function () {
 
     container.appendChild(winner);
 
-    setTimeout(webReload, 10000);
+    setTimeout(webReload, 5000);
 };
 
 welcomePlayer();
