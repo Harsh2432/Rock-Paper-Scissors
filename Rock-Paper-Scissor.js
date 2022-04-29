@@ -320,7 +320,7 @@ let pageReload = function () {
     result.remove();
 
     scorePlus.remove();
-    
+
     loadFunc();
 };
 
@@ -398,12 +398,12 @@ let loadFunction = function () {
     setTimeout(endResult, 2000);
 };
 
-let endResult = function () {
+const disResult = document.createElement("div");
+disResult.classList.add("disResult");
+disResult.textContent = "Time to display end Result! ";
+disResult.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
-    const disResult = document.createElement("div");
-    disResult.classList.add("disResult");
-    disResult.textContent = "Time to display end Result! ";
-    disResult.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
+let endResult = function () {
 
     container.replaceChild(disResult, loadingDec);
 
@@ -415,6 +415,7 @@ roundsPlayed.classList.add("roundsPlayed");
 roundsPlayed.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
 let numRounds = function () {
+
     roundsPlayed.textContent = `${round} Rounds Played!`;
 
     container.appendChild(roundsPlayed);
@@ -427,6 +428,7 @@ morePoints.classList.add("morePoints");
 morePoints.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
 let disPoint = function () {
+
     if (playerPoint > computerPoint) {
         morePoints.textContent = `${pName} scores ${playerPoint - computerPoint} points more than Computer!`;
     }
@@ -448,11 +450,6 @@ const winner = document.createElement("div");
 winner.classList.add("winner");
 winner.style.cssText = "display: flex; flex: 1; justify-content: center; align-items: center; color: white; border: 2px solid white; border-radius: 10px; padding: 10px; font-family: monospace; font-size: 18px; width: 515px;";
 
-let webReload = function () {
-
-    location.reload();
-}
-
 let disWinner = function () {
 
     if (playerPoint > computerPoint) {
@@ -469,7 +466,27 @@ let disWinner = function () {
 
     container.appendChild(winner);
 
-    setTimeout(webReload, 10000);
+    setTimeout(reloadFunc, 5000);
 };
+
+let reloadFunc = function () {
+    
+    roundsPlayed.remove();
+
+    morePoints.remove();
+
+    winner.remove();
+
+    load.textContent = "RELOADING WEBSITE";
+
+    container.replaceChild(loadingDec, disResult);
+
+    setTimeout(webReload, 2000);
+}
+
+let webReload = function () {
+
+    location.reload();
+}
 
 welcomePlayer();
